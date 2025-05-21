@@ -4,7 +4,7 @@ import { DB_URI } from "$env/static/private";
 const client = new MongoClient(DB_URI);
 
 await client.connect();
-const db = client.db("ScreenStackDB"); // select database
+const db = client.db("Katzenausstellung"); // select database
 
 //////////////////////////////////////////
 // Movies
@@ -14,7 +14,7 @@ const db = client.db("ScreenStackDB"); // select database
 async function getMovies() {
   let movies = [];
   try {
-    const collection = db.collection("movies");
+    const collection = db.collection("katzen");
 
     // You can specify a query/filter here
     // See https://www.mongodb.com/docs/drivers/node/current/fundamentals/crud/query-document/

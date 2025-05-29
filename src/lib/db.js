@@ -63,7 +63,7 @@ async function getMovie(id) {
 } 
 */
 async function createMovie(katze) {
-  katze.poster = "/images/placeholder.jpg"; // default poster
+  katze.poster = "/images/placeholder.png"; // default poster
   katze.actors = [];
   katze.watchlist = false;
   try {

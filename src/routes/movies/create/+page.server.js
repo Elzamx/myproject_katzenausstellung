@@ -9,7 +9,7 @@ export const actions = {
       alter: data.get("alter"),
       geschlecht: data.get("geschlecht"),
     };
-    await db.createKatzenaustellung(Katzenausstellung);
+    await db.createMovie(katze);
     return { success: true };
   },
 };

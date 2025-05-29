@@ -24,7 +24,7 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/movies"
-            >Movies</a
+            >Cats</a
           >
         </li>
       </ul>

@@ -3,23 +3,27 @@
 </script>
 
 <a href="/movies">Back</a>
-<h1>Add a Movie</h1>
+<h1>Füge eine Katze hinzu</h1>
 <form method="POST" action="?/create">
   <div class="mb-3">
     <label for="" class="form-label">Name</label>
     <input name="name" class="form-control" type="text" />
   </div>
   <div class="mb-3">
-    <label for="" class="form-label">Year</label>
-    <input name="year" class="form-control" type="number" />
+    <label for="" class="form-label">Rasse</label>
+    <input name="rasse" class="form-control" type="number" />
   </div>
   <div class="mb-3">
-    <label for="" class="form-label">Length</label>
-    <input name="length" class="form-control" type="text" />
+    <label for="" class="form-label">Alter</label>
+    <input name="alter" class="form-control" type="text" />
   </div>
-  <button type="submit" class="btn btn-primary">Add Movie</button>
+    <div class="mb-3">
+    <label for="" class="form-label">Geschlecht</label>
+    <input name="geschlecht" class="form-control" type="text" />
+  </div>
+  <button type="submit" class="btn btn-primary">Katze hinzufügen</button>
 </form>
 
 {#if form?.success}
-  <p>Movie created</p>
+  <p>Katze hinzugefügt</p>
 {/if}

@@ -3,7 +3,7 @@ import { redirect } from "@sveltejs/kit";
 
 export async function load({ params }) {
   return {
-    movie: await db.getMovie(params.movie_id),
+    katze: await db.getMovie(params.katze_id),
   };
 }
 

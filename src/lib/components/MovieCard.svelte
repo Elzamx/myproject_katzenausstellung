@@ -1,20 +1,26 @@
 <script>
-  let { movie } = $props();
+  let { katze } = $props();
 </script>
 
 <div class="movie-card">
   <div>
-    <img class="img-fluid" src={movie.poster} alt="" />
+    <img class="img-fluid" src={katze.poster} alt="" />
   </div>
   <div class="details">
     <div class="title">
-      <a href={"/movies/" + movie._id}>{movie.title}</a>
+      <a href={"/movies/" + katze._id}>{katze.title}</a>
     </div>
     <div>
-      Jahr: {movie.year}
+      Name: {katze.name}
     </div>
     <div>
-      Dauer: {movie.length}
+      Rasse: {katze.rasse}
+    </div>
+    <div>
+      Alter: {katze.alter}
+    </div>
+    <div>
+      Geschlecht: {katze.geschlecht}
     </div>
   </div>
 </div>

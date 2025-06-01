@@ -8,7 +8,7 @@
   data-bs-theme="dark"
 >
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">ScreenStack</a>
+    <a class="navbar-brand" href="/">Homepage</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -24,7 +24,7 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/movies"
-            >Cats</a
+            >Katzen</a
           >
         </li>
       </ul>

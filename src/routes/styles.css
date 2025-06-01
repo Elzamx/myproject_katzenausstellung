@@ -1,4 +1,23 @@
 body {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
+
+h1 { /* Titel überall gleich gestalten */
+        font-weight: 700; /* macht Titel fett */
+        color: #6d4c41;
+        letter-spacing: 2px; /* Abstand zwischen Buchstaben */
+        margin-bottom: 0.7em;
+        margin-top: 0.7em;
+}
+p, .intro-text { /* Introtext überall gleich gestalten */
+        line-height: 1.6; /* macht Zeilenabstand */
+        margin-bottom: 1.5em;
+}
+
+.my-btn {
+        border-radius: 20px;
+        font-weight: bold;
+        padding: 0.7em 2em; /* Mehr Abstand */
+        border: none;
+    }

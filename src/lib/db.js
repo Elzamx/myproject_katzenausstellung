@@ -32,13 +32,13 @@ async function getMovies() {
   return katzen;
 }
 
-// Get movie by id
+// Get movie by id - Detailsseite Katze sehen
 async function getMovie(id) {
   let katze = null;
   try {
     const collection = db.collection("katzen");
     const query = { _id: new ObjectId(id) }; // filter by id
-    movie = await collection.findOne(query);
+    katze = await collection.findOne(query);
 
     if (!katze) {
       console.log("No cat with id " + id);

@@ -16,7 +16,7 @@ h1 {
 
 p,
 .intro-text {
-    /* Introtext überall gleich gestalten */
+    /* .intro-text = Introtext überall gleich gestalten */
     line-height: 1.6;
     /* macht Zeilenabstand */
     margin-bottom: 1.5em;
@@ -32,7 +32,7 @@ p,
 
 .backbt-container {
     display: flex;
-    justify-content: left;
+    justify-content: right;
     margin-top: 1em;
     margin-bottom: 1em;
 }

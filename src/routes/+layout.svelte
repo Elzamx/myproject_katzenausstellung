@@ -3,10 +3,7 @@
   let { children } = $props();
 </script>
 
-<nav
-  class="navbar navbar-expand-lg bg-body-tertiary bg-dark"
-  data-bs-theme="dark"
->
+<nav class="navbar navbar-expand-lg my-navbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Homepage</a>
     <button
@@ -33,5 +30,13 @@
 </nav>
 
 <div class="container mt-3">
+  <!-- mt-3 ist Bootstrap-Klasse für margin-top -->
   {@render children()}
+  <!-- Rendern -> hier wird der Inhalt der aktuellen Seite angezeigt -->
 </div>
+
+<style>
+  .my-navbar {
+    background-color: #6d4c41
+  }
+</style>

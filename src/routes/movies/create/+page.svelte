@@ -2,20 +2,19 @@
   let { form } = $props();
 </script>
 
-<a href="/movies">Back</a>
-<h1>Füge eine Katze hinzu</h1>
+<h1>Füge deine Katze hinzu</h1>
 <form method="POST" action="?/create">
   <div class="mb-3">
     <label for="" class="form-label">Name</label>
-    <input name="name" class="form-control" type="text" />
+    <input name="name" class="form-control" type="text" /> <!-- form-control ist Bootstrap-Klasse für Input-Felder und type ist ob Text oder Zahl schreiben kannst -->
   </div>
   <div class="mb-3">
     <label for="" class="form-label">Rasse</label>
-    <input name="rasse" class="form-control" type="number" />
+    <input name="rasse" class="form-control" type="text" />
   </div>
   <div class="mb-3">
     <label for="" class="form-label">Alter</label>
-    <input name="alter" class="form-control" type="text" />
+    <input name="alter" class="form-control" type="number" />
   </div>
     <div class="mb-3">
     <label for="" class="form-label">Geschlecht</label>
@@ -25,5 +24,10 @@
 </form>
 
 {#if form?.success}
-  <p>Katze hinzugefügt</p>
+  <p style="margin-top: 1em;">Katze wurde erfolgreich hinzugefügt</p>
 {/if}
+
+<div class="backbt-container">
+  <!-- damit ich button zentrieren kann-->
+<a href="/movies" class="btn btn-secondary">Zurück zur Übersicht</a>
+</div>

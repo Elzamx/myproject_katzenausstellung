@@ -33,18 +33,19 @@
     background-color: white;
     color: black;
   }
+  .cat-card:hover {
+    /* beim drüberfahren mit Maus wird card grösser */
+    box-shadow: 0 8px 24px lightgray;
+    transform: translateY(-4px) scale(1.02); /* verschiebt Karte leicht nach oben & vergrössert sie */
+    transition: all 0.2s; /* sanfter Übergang */
+  }
   .details {
     padding: 0.5em;
   }
   .title {
     font-weight: bold;
   }
-  .title a {
-    /* Passt Link an zb Unterstrich */
-    text-decoration: none;
-    color: black;
-    font-size: 1.1em;
-  }
+
   .title a:hover {
     text-decoration: underline; /* Unterstrich beim Hover/drüberfahren */
     color: #3949ab; /*andere Farbe beim Hover/dürüberfahren */

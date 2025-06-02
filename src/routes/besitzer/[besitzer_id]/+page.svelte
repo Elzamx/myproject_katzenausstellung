@@ -16,8 +16,9 @@
   </form>
 </div>
 
-<div class="d-flex justify-content-end gap-2 my-3"> <!-- Bootstrap Klasse für buttons nebeneinander & rechts -->
+<div class="d-flex justify-content-end gap-2 my-3">
+  <!-- Bootstrap Klasse für buttons nebeneinander & rechts -->
+  <a href={"/besitzer/" + b._id + "/edit"} class="btn btn-primary">Besitzerdaten bearbeiten</a>
   <a href="/besitzer" class="btn btn-secondary">Zurück zur Übersicht</a>
-  <a href={"/besitzer/" + b._id + "/edit"} class="btn btn-primary">Bearbeiten</a>
 </div>
 <!-- mit + werden die Teile zu einer vollständigen URL zusammengesetzt -->

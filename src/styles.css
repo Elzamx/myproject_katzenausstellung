@@ -5,13 +5,13 @@ body {
 
 h1 {
     /* Titel überall gleich gestalten */
-    font-weight: bold;
+    font-weight: bold !important;
     /* macht Titel fett */
-    color: #6d4c41;
-    letter-spacing: 2px;
+    color: #6d4c41 !important;
+    letter-spacing: 2px !important;
     /* Abstand zwischen Buchstaben */
-    margin-bottom: 0.7em;
-    margin-top: 0.7em;
+    margin-bottom: 0.7em !important;
+    margin-top: 0.7em !important;
 }
 
 p,
@@ -23,11 +23,11 @@ p,
 }
 
 .my-btn {
-    border-radius: 20px;
-    font-weight: bold;
-    padding: 0.7em 2em;
+    border-radius: 20px !important;
+    font-weight: bold !important;
+    padding: 0.7em 2em !important;
     /* Mehr Abstand */
-    border: none;
+    border: none !important;
 }
 
 .backbt-container {

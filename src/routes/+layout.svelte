@@ -5,7 +5,7 @@
 
 <nav class="navbar navbar-expand-lg my-navbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Homepage</a>
+    <a class="navbar-brand" href="/">Home</a>
     <button
       class="navbar-toggler"
       type="button"

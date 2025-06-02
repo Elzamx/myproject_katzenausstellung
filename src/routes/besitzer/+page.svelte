@@ -6,9 +6,9 @@
 <div>
     <h1 class="main-title">Unsere stolzen Besitzer*innen</h1>
     <p style="margin-bottom: 1em;">
-        Hier findest du eine Übersicht aller registrierten Katzenbesitzer*innen
-        - von liebevollen Dosenöffnern bis zu leidenschaftlichen
-        Ausstellungsprofis.
+        Hier findest du eine Übersicht aller registrierten Katzenbesitzer*innen -
+        von fürsorglichen Alltagsbegleitern bis hin zu passionierten Ausstellungsprofis,
+        die ihre Vierbeiner mit Stolz präsentieren.
     </p>
 </div>
 

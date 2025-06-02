@@ -1,4 +1,4 @@
-import { MongoClient, ObjectId } from "mongodb"; // See https://www.mongodb.com/docs/drivers/node/current/quick-start/
+import { MongoClient, ObjectId } from "mongodb";
 import { DB_URI } from "$env/static/private";
 
 const client = new MongoClient(DB_URI);
@@ -6,18 +6,11 @@ const client = new MongoClient(DB_URI);
 await client.connect();
 const db = client.db("Katzenausstellung"); // select database
 
-//////////////////////////////////////////
-// Movies
-//////////////////////////////////////////
-
-// Get all movies
+// Get all cats
 async function getMovies() {
   let katzen = [];
   try {
     const collection = db.collection("katzen");
-
-    // You can specify a query/filter here
-    // See https://www.mongodb.com/docs/drivers/node/current/fundamentals/crud/query-document/
     const query = {};
 
     // Get all objects that match the query
@@ -27,12 +20,12 @@ async function getMovies() {
     });
   } catch (error) {
     console.log(error);
-    // TODO: errorhandling
+
   }
   return katzen;
 }
 
-// Get movie by id - Detailsseite Katze sehen
+// Get movie by id - Detailseite Katze einsehen
 async function getMovie(id) {
   let katze = null;
   try {
@@ -41,37 +34,24 @@ async function getMovie(id) {
     katze = await collection.findOne(query);
 
     if (!katze) {
-      console.log("No cat with id " + id);
-      // TODO: errorhandling
+      console.log("Keine Katze mit ID " + id + " gefunden.");
     } else {
       katze._id = katze._id.toString(); // convert ObjectId to String
     }
   } catch (error) {
-    // TODO: errorhandling
     console.log(error.message);
   }
   return katze;
 }
 
-// create movie
-// Example movie object:
-/* 
-{ 
-  title: "Das Geheimnis von Altura",
-  year: 2024,
-  length: "120 Minuten"
-} 
-*/
+// Create a new cat
 async function createMovie(katze) {
   katze.poster = "/images/placeholder.png"; // default poster
-  katze.actors = [];
-  katze.watchlist = false;
   try {
     const collection = db.collection("katzen");
     const result = await collection.insertOne(katze);
     return result.insertedId.toString(); // convert ObjectId to String
   } catch (error) {
-    // TODO: errorhandling
     console.log(error.message);
   }
   return null;

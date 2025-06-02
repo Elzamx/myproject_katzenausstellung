@@ -84,10 +84,10 @@ async function updateMovie(katze) {
     const result = await collection.updateOne(query, { $set: katze });
 
     if (result.matchedCount === 0) {
-      console.log("No cat with id " + id);
+      console.log("Keine Katze mit ID " + id);
       // TODO: errorhandling
     } else {
-      console.log("Cat with id " + id + " has been updated.");
+      console.log("Katze mit ID " + id + " wurde erfolgreich aktualisiert.");
       return id;
     }
   } catch (error) {

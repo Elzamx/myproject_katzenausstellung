@@ -3,6 +3,10 @@ body {
     color: black;
 }
 
+body {
+  background-color: lightyellow !important;
+}
+
 h1 {
     /* Titel überall gleich gestalten */
     font-weight: bold;

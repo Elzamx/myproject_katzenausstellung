@@ -18,6 +18,6 @@
 
 <div class="d-flex justify-content-end gap-2 my-3"> <!-- Bootstrap Klasse für buttons nebeneinander & rechts -->
   <a href="/besitzer" class="btn btn-secondary">Zurück zur Übersicht</a>
-  <a href={`/besitzer/${b._id}/edit`} class="btn btn-primary">Bearbeiten</a>
+  <a href={"/besitzer/" + b._id + "/edit"} class="btn btn-primary">Bearbeiten</a>
 </div>
-<!-- braucht ${b._id} um zur korrekten Bearbeitungsseite weitergeleitet zu werden -->
+<!-- mit + werden die Teile zu einer vollständigen URL zusammengesetzt -->

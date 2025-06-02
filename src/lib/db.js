@@ -25,7 +25,7 @@ async function getKatzen() {
   return katzen;
 }
 
-// Get movie by id - Detailseite Katze einsehen
+// Get cat by id - Detailseite Katze einsehen
 async function getKatzeById(id) {
   let katze = null;
   try {
@@ -58,7 +58,7 @@ async function createKatze(katze) {
 }
 
 
-// returns: id of the updated movie or null, if movie could not be updated
+// returns: id of the updated cat or null, if cat could not be updated
 async function updateKatze(katze) {
   try {
     let id = katze._id;
@@ -80,7 +80,7 @@ async function updateKatze(katze) {
   return null;
 }
 
-// returns: id of the deleted movie or null, if movie could not be deleted
+// returns: id of the deleted cat or null, if cat could not be deleted
 async function deleteKatze(id) {
   try {
     const collection = db.collection("katzen");

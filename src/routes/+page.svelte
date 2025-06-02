@@ -31,7 +31,7 @@
 </p>
 
 <div class="button-container"> <!-- Container für button, um button in mitte platzieren zu können -->
-    <a href="/movies/create" class="btn btn-primary my-btn">Katze hinzufügen</a> <!-- btn btn-primary ist Bootstrap-Style, my-btn ist mein style des Buttons (in css file) -->
+    <a href="/katzen/create" class="btn btn-primary my-btn">Katze hinzufügen</a> <!-- btn btn-primary ist Bootstrap-Style, my-btn ist mein style des Buttons (in css file) -->
 </div>
 
 <style>

@@ -1,10 +1,31 @@
 <script>
   import MovieCard from "$lib/components/MovieCard.svelte";
-  let { data } = $props();
+  export let data;
+
+  let search = ""; // Suchbegriff als Variable speichern
+  $: filteredKatzen = data.katzen.filter(
+    // $ sorgt, dass filteredKatzen automatisch aktualisiert wird, wenn sich data.katzen oder search ändert
+    (
+      katze, // filter() geht alle Katzen durch und prüft Suchbegriff und verwandelt alles in Kleinbuchstaben damit Suche nicht gross/kleinschreibungsabhängig ist
+    ) =>
+      katze.name.toLowerCase().includes(search.toLowerCase()) ||
+      (katze.beschreibung &&
+        katze.beschreibung.toLowerCase().includes(search.toLowerCase())),
+  );
 </script>
 
 <div>
   <h1 class="main-title">Entdecke die Katzencommunity</h1>
+  <!-- Suchfeld hinzufügen / bind:value wird inhalt des Feldes automatisch in Variable search gespeichert-->
+<div class="search-container">
+  <input
+    type="text"
+    placeholder="Suche nach einer Katze..."
+    bind:value={search}
+    class="form-control"
+    style= "margin: 0 auto 1em auto;" 
+  /> <!-- max-width: 400px; damit Suchfeld nicht zu breit wird, margin: 0 auto 2em auto; damit es zentriert ist und Abstand nach unten hat -->
+</div>
   <p style="margin-bottom: 1em;">
     Hier präsentieren stolze Katzenbesitzer*innen ihre ganz besonderen
     Lieblingsstars. Von gemütlichen Couch-Katern bis hin zu selbstbewussten
@@ -12,6 +33,8 @@
     unterschiedlichsten Persönlichkeiten auf vier Pfoten!
   </p>
 </div>
+
+
 
 <div class="button-container">
   <!-- Container für button, um button in mitte platzieren zu können -->
@@ -21,8 +44,8 @@
 
 <div class="row mt-3">
   <!-- mt-3 ist Bootstrap-Klasse für margin-top -->
-  {#each data.katzen as katze}
-    <!-- durchläuft alle Katzen im Array data.katzen -->
+  {#each filteredKatzen as katze}
+    <!-- nur die Katzen, die zum Suchbegriff passen -> bei data.katzen wird nur immer die Komplette Liste angezeigt, egal was im Suchfeld ist -->
     <div class="col-sm-6 col-md-4 col-lg-3 mb-2 gx-2">
       <!-- Karten in verschiedenen Bildschirmgrössen und unterschiedlich breit -->
       <MovieCard {katze}></MovieCard>
@@ -44,5 +67,9 @@
     text-align: right;
     margin-bottom: 1em;
     font-size: small;
+  }
+  .search-container {
+    display: flex;
+    margin-bottom: 1em;
   }
 </style>

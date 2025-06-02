@@ -24,6 +24,9 @@
             >Katzen</a
           >
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/besitzer">Besitzer</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -37,6 +40,6 @@
 
 <style>
   .my-navbar {
-    background-color: #6d4c41
+    background-color: #6d4c41;
   }
 </style>

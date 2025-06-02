@@ -36,3 +36,10 @@ p,
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
+.title a {
+    /* Passt Link an */
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+  }

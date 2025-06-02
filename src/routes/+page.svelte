@@ -4,7 +4,7 @@
         <strong>Hier regieren Schnurrhaare, Pfoten und Persönlichkeit.</strong
         ><br />
         Egal ob flauschig, frech, königlich oder chaotisch - zeig der Welt deine
-        Katze!
+        Katze und dich als stolzen Besitzer oder stolze Besitzerin!
     </p>
     <p class="intro-text">
         Lade ein Bild hoch, gib ihr einen Namen, erzähl was über sie -<br />
@@ -18,6 +18,7 @@
     <ul>
         <li>Durch andere Katzen stöbern</li>
         <li>Deine eigene Katze hinzufügen</li>
+        <li>Dich als Besitzer*in registrieren</li>
         <li>Vielleicht sogar bald liken, kommentieren oder abstimmen?</li>
     </ul>
 </div>

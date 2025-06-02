@@ -2,7 +2,7 @@ import db from "$lib/db.js";
 import { redirect, error } from "@sveltejs/kit";
 
 export async function load({ params }) {
-  const katze = await db.getMovie(params.movie_id);
+  const katze = await db.getKatzeById(params.movie_id);
 
   if (!katze) {
     throw error(404, "Katze nicht gefunden");
@@ -24,7 +24,7 @@ export const actions = {
       poster: data.get("poster"),
     };
 
-    await db.updateMovie(updatedKatze);
+    await db.updateKatze(updatedKatze);
 
     throw redirect(303, "/movies/" + params.movie_id);
   },

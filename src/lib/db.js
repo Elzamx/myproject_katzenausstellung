@@ -7,7 +7,7 @@ await client.connect();
 const db = client.db("Katzenausstellung"); // select database
 
 // Get all cats
-async function getMovies() {
+async function getKatzen() {
   let katzen = [];
   try {
     const collection = db.collection("katzen");
@@ -26,7 +26,7 @@ async function getMovies() {
 }
 
 // Get movie by id - Detailseite Katze einsehen
-async function getMovie(id) {
+async function getKatzeById(id) {
   let katze = null;
   try {
     const collection = db.collection("katzen");
@@ -45,7 +45,7 @@ async function getMovie(id) {
 }
 
 // Create a new cat
-async function createMovie(katze) {
+async function createKatze(katze) {
   katze.poster = "/images/placeholder.png"; // default poster
   try {
     const collection = db.collection("katzen");
@@ -59,7 +59,7 @@ async function createMovie(katze) {
 
 
 // returns: id of the updated movie or null, if movie could not be updated
-async function updateMovie(katze) {
+async function updateKatze(katze) {
   try {
     let id = katze._id;
     delete katze._id; // delete the _id from the object, because the _id cannot be updated
@@ -81,7 +81,7 @@ async function updateMovie(katze) {
 }
 
 // returns: id of the deleted movie or null, if movie could not be deleted
-async function deleteMovie(id) {
+async function deleteKatze(id) {
   try {
     const collection = db.collection("katzen");
     const query = { _id: new ObjectId(id) }; // filter by id
@@ -101,9 +101,9 @@ async function deleteMovie(id) {
 
 // export all functions so that they can be used in other files
 export default {
-  getMovies,
-  getMovie,
-  createMovie,
-  updateMovie,
-  deleteMovie,
+  getKatzen,
+  getKatzeById,
+  createKatze,
+  updateKatze,
+  deleteKatze,
 };

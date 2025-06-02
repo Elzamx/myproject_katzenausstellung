@@ -57,23 +57,7 @@ async function createMovie(katze) {
   return null;
 }
 
-// update movie
-// Example movie object:
-/* 
-{ 
-  _id: "6630e72c95e12055f661ff13",
-  title: "Das Geheimnis von Altura",
-  year: 2024,
-  length: "120 Minuten",
-  actors: [
-    "Lena Herzog",
-    "Maximilian Schröder",
-    "Sophia Neumann"
-  ],
-  poster: "/images/Altura.png",
-  watchlist: false
-} 
-*/
+
 // returns: id of the updated movie or null, if movie could not be updated
 async function updateMovie(katze) {
   try {
@@ -85,19 +69,17 @@ async function updateMovie(katze) {
 
     if (result.matchedCount === 0) {
       console.log("Keine Katze mit ID " + id);
-      // TODO: errorhandling
     } else {
       console.log("Katze mit ID " + id + " wurde erfolgreich aktualisiert.");
       return id;
     }
   } catch (error) {
-    // TODO: errorhandling
+
     console.log(error.message);
   }
   return null;
 }
 
-// delete movie by id
 // returns: id of the deleted movie or null, if movie could not be deleted
 async function deleteMovie(id) {
   try {
@@ -112,8 +94,7 @@ async function deleteMovie(id) {
       return id;
     }
   } catch (error) {
-    // TODO: errorhandling
-    console.log(error.message);
+     console.log(error.message);
   }
   return null;
 }

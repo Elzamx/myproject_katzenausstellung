@@ -3,6 +3,7 @@
 </script>
 
 <h1>Füge deine Katze hinzu</h1>
+
 <form method="POST" action="?/create">
   <div class="mb-3">
     <label for="" class="form-label">Name</label>
@@ -20,11 +21,11 @@
     <label for="" class="form-label">Geschlecht</label>
     <input name="geschlecht" class="form-control" type="text" />
   </div>
-  <button type="submit" class="btn btn-primary">Katze hinzufügen</button>
+  <button type="submit" class="btn btn-primary my-btn">Speichern</button>
 </form>
 
 {#if form?.success}
-  <p style="margin-top: 1em;">Katze wurde erfolgreich hinzugefügt</p>
+  <p class="text-success mt-3">Katze wurde erfolgreich hinzugefügt</p>
 {/if}
 
 <div class="backbt-container">

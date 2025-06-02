@@ -5,7 +5,7 @@
 <div class="card p-3">
   <div class="title">
     <a href={"/besitzer/" + b._id}>{b.name}</a>
-    <!-- Link to the movie details -->
+    <!-- Link to the besitzer details by name -->
   </div>
 
   <p class="mb-1"><b>Email:</b> {b.email}</p>
@@ -18,8 +18,7 @@
     background-color: rgb(241, 227, 227);
   }
   .card:hover {
-    /* beim drüberfahren mit Maus wird card grösser */
-    box-shadow: 0 8px 24px lightgray;
+    box-shadow: 0 8px 24px lightgray; /* beim drüberfahren mit Maus wird card grösser */
     transform: translateY(-4px) scale(1.02); /* verschiebt Karte leicht nach oben & vergrössert sie */
     transition: all 0.2s; /* sanfter Übergang */
   }

@@ -5,14 +5,14 @@
 <div class="cat-card">
   <div>
     <a href={"/movies/" + katze._id}>
-      <!-- Link to the movie details via picture-->
+      <!-- Link to the cat details via picture-->
       <img class="img-fluid cat-image" src={katze.poster} alt="" />
     </a>
   </div>
   <div class="details">
     <div class="title">
       <a href={"/movies/" + katze._id}>{katze.name}</a>
-      <!-- Link to the movie details -->
+      <!-- Link to the cat details -->
     </div>
     <div>
       Rasse: {katze.rasse}
@@ -34,8 +34,7 @@
     color: black;
   }
   .cat-card:hover {
-    /* beim drüberfahren mit Maus wird card grösser */
-    box-shadow: 0 8px 24px lightgray;
+    box-shadow: 0 8px 24px lightgray; /* beim drüberfahren mit Maus wird card grösser */
     transform: translateY(-4px) scale(1.02); /* verschiebt Karte leicht nach oben & vergrössert sie */
     transition: all 0.2s; /* sanfter Übergang */
   }

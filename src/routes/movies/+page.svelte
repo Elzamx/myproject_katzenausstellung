@@ -49,7 +49,7 @@
     <div class="col-sm-6 col-md-4 col-lg-3 mb-2 gx-2">
       <!-- Karten in verschiedenen Bildschirmgrössen und unterschiedlich breit -->
       <MovieCard {katze}></MovieCard>
-      <!-- MovieCard-Komponente für jede Katze -->
+      <!-- KatzenCard-Komponente für jede Katze -->
     </div>
   {/each}
 </div>

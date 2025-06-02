@@ -18,9 +18,16 @@
 
   <div class="mb-3">
     <label for="" class="form-label">Telefonnummer</label>
-    <input name="phoneNumber" class="form-control" value={b.phoneNumber} type="number"  />
+    <input
+      name="phoneNumber"
+      class="form-control"
+      value={b.phoneNumber}
+      type="number"
+    />
   </div>
 
-  <button type="submit" class="btn btn-success">Änderungen speichern</button>
-  <a href={"/besitzer/" + b._id} class="btn btn-secondary">Abbrechen</a>
+  <div class="d-flex justify-content-end gap-2"> <!-- Bootstrap Klasse für buttons nebeneinander & rechts (gab sorgt für abstand zwischen buttons, d-flex macht einen flex (inhalt flexibel anordnen) container) -->
+    <button type="submit" class="btn btn-success">Änderungen speichern</button>
+    <a href={"/besitzer/" + b._id} class="btn btn-secondary">Abbrechen</a>
+  </div>
 </form>

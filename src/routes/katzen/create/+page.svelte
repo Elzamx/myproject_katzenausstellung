@@ -29,6 +29,6 @@
 {/if}
 
 <div class="backbt-container">
-  <!-- damit ich button zentrieren kann-->
+  <!-- damit ich button rechts habe -->
 <a href="/katzen" class="btn btn-secondary">Zurück zur Übersicht</a>
 </div>

@@ -31,6 +31,8 @@
     <input name="poster" class="form-control" value={katze.poster} type="text" />
   </div>
 
+  <div class="d-flex justify-content-end gap-2"> <!-- Bootstrap Klasse für buttons nebeneinander & rechts (gab sorgt für abstand zwischen buttons, d-flex macht einen flex (inhalt flexibel anordnen) container) -->
   <button type="submit" class="btn btn-success">Änderungen speichern</button>
   <a href={"/katzen/" + katze._id} class="btn btn-secondary">Abbrechen</a>
+</div>
 </form>

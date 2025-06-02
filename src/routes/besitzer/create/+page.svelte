@@ -24,5 +24,10 @@
 </form>
 
 {#if form?.success}
-  <p class="text-success mt-2">Besitzer erfolgreich hinzugefügt</p>
+  <p class="text-success mt-2">Besitzer wurde erfolgreich hinzugefügt</p>
 {/if}
+
+<div class="backbt-container">
+  <!-- damit ich button rechts habe -->
+<a href="/besitzer" class="btn btn-secondary">Zurück zur Übersicht</a>
+</div>

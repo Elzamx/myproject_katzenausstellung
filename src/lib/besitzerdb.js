@@ -5,10 +5,6 @@ const client = new MongoClient(DB_URI);
 await client.connect();
 const db = client.db("Katzenausstellung");
 
-//////////////////////////////////////////
-// Besitzer
-//////////////////////////////////////////
-
 // Get all besitzer
 async function getBesitzer() {
     let besitzer = [];

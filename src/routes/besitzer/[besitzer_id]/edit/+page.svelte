@@ -22,5 +22,5 @@
   </div>
 
   <button type="submit" class="btn btn-success">Änderungen speichern</button>
-  <a href={`/besitzer/${b._id}`} class="btn btn-secondary">Abbrechen</a>
+  <a href={"/besitzer/" + b._id} class="btn btn-secondary">Abbrechen</a>
 </form>

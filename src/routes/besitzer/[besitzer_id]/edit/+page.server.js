@@ -1,14 +1,11 @@
 import besitzerdb from "$lib/besitzerdb.js";
-import { redirect } from "@sveltejs/kit";
+import { redirect, error } from "@sveltejs/kit";
 
 export async function load({ params }) {
   const besitzer = await besitzerdb.getBesitzerById(params.besitzer_id);
 
   if (!besitzer) {
-    return {
-      status: 404,
-      error: new Error("Besitzer nicht gefunden"),
-    };
+    throw error(404, "Besitzer nicht gefunden");
   }
 
   return { besitzer };
@@ -27,6 +24,6 @@ export const actions = {
 
     await besitzerdb.updateBesitzer(updatedBesitzer);
 
-    throw redirect(303, "/besitzer/");
+    throw redirect(303, "/besitzer/" + params.besitzer_id);
   },
 };

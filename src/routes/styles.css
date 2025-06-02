@@ -5,7 +5,7 @@ body {
 
 h1 {
     /* Titel überall gleich gestalten */
-    font-weight: 650;
+    font-weight: bold;
     /* macht Titel fett */
     color: #6d4c41;
     letter-spacing: 2px;
